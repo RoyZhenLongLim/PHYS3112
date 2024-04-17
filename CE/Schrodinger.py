@@ -9,7 +9,7 @@ m = 9.1e-31  # kg
 # grid
 Np = 100
 a = 1e-10  # m
-X = a * np.linspace(1, Np, Np) / 1e-9  # nm
+
 
 # Define Hamiltonian as a tridiagonal matrix
 t0 = (hbar * hbar) / (2 * m * a * a) / q  # divide by q to convert to eV
@@ -46,7 +46,7 @@ print(W[0:10])
 Energy_gap = W[1] - W[0]
 print(Energy_gap)
 
-# calculate probablity
+# calculate probability
 Psi0 = np.multiply(V[:, 0], V[:, 0])
 Psi1 = np.multiply(V[:, 1], V[:, 1])
 
